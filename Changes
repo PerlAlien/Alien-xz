@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+0.02      2017-01-18 16:04:20 -0500
   - Added %{xz} helper
 
 0.01      2017-01-18 05:15:17 -0500
