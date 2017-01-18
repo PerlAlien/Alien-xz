@@ -12,6 +12,7 @@ pod_coverage:
   # for either Class or method.
   private:
     - Alien::xz::Install::Files#Inline
+    - Alien::xz#alien_helper
 
 version:
   dir: lib
