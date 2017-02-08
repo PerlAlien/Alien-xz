@@ -27,7 +27,7 @@ $post_diag = sub {
   diag "cflags_static  = ", Alien::xz->cflags_static;
   diag "libs           = ", Alien::xz->libs;
   diag "libs_static    = ", Alien::xz->libs_static;
-  diag "bin_dir = ", $_ for Alien::xz->bin_dir;
+  diag "bin_dir        = ", $_ for Alien::xz->bin_dir;
 };
 
 my @modules = sort keys %modules;
