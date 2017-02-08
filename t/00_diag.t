@@ -10,10 +10,11 @@ my %modules;
 my $post_diag;
 
 $modules{$_} = $_ for qw(
-  Alien::Base
-  Alien::Base::ModuleBuild
-  File::ShareDir
-  Module::Build
+  Alien::Base2
+  Alien::Build
+  Alien::Build::MM
+  ExtUtils::MakeMaker
+  IPC::Cmd
   Test2::Suite
   Test::Alien
   Test::More
@@ -21,9 +22,11 @@ $modules{$_} = $_ for qw(
 
 $post_diag = sub {
   require Alien::xz;
-  diag "version = ", Alien::xz->config('version');
-  diag "cflags  = ", Alien::xz->cflags;
-  diag "libs    = ", Alien::xz->libs;
+  diag "version        = ", Alien::xz->config('version');
+  diag "cflags         = ", Alien::xz->cflags;
+  diag "cflags_static  = ", Alien::xz->cflags_static;
+  diag "libs           = ", Alien::xz->libs;
+  diag "libs_static    = ", Alien::xz->libs_static;
   diag "bin_dir = ", $_ for Alien::xz->bin_dir;
 };
 

@@ -1,6 +1,7 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+  - Migrate to Alien::Build
 
 0.02      2017-01-18 16:04:20 -0500
   - Added %{xz} helper

@@ -2,7 +2,7 @@ package Alien::xz;
 
 use strict;
 use warnings;
-use base qw( Alien::Base );
+use base qw( Alien::Base2 );
 
 # ABSTRACT: Find or build xz
 # VERSION
