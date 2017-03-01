@@ -1,6 +1,7 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+  - Remove dep on Alien::Base2
 
 0.03      2017-02-08 13:08:06 -0500
   - Migrate to Alien::Build
