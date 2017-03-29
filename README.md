@@ -47,7 +47,7 @@ In your script or module:
 # DESCRIPTION
 
 This package can be used by other CPAN modules that require xz,
-the compression utility.
+the compression utility, or liblzma, which comes with it.
 
 # HELPERS
 
