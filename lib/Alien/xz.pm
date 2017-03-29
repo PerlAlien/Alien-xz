@@ -6,26 +6,7 @@ use base qw( Alien::Base );
 
 # ABSTRACT: Find or build xz
 # VERSION
-
-=head1 SYNOPSIS
-
-From a Perl script
-
- use Alien::xz;
- use Env qw( @PATH );
- unshift @PATH, Alien::xz->bin_dir;  # xz is now in your path
-
-From Alien::Base Build.PL
-
- use Alien:Base::ModuleBuild;
- my $builder = Module::Build->new(
-   ...
-   alien_bin_requires => {
-     'Alien::xz' => '0.02',
-   }
-   ...
- );
- $builder->create_build_script;
+# ALIEN SYNOPSIS
 
 =head1 DESCRIPTION
 
@@ -48,5 +29,7 @@ sub alien_helper
     xz => sub { 'xz' },
   };
 }
+
+# ALIEN SEE ALSO
 
 1;
