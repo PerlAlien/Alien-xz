@@ -13,6 +13,7 @@ $modules{$_} = $_ for qw(
   Alien::Base
   Alien::Build
   Alien::Build::MM
+  Config
   ExtUtils::MakeMaker
   IPC::Cmd
   Test2::Suite
