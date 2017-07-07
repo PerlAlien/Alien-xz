@@ -1,6 +1,7 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+  - Adjust prereqs to require SSL libraries needed for https
 
 0.05      2017-06-10 19:11:08 -0400
   - Build dynamic libraries too

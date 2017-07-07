@@ -9,7 +9,7 @@ addons:
 install:
   - perlbrew list
   - cpanm -n App::af
-  - af missing | cpanm
+  - af missing | cpanm -n
   - dzil authordeps --missing | cpanm -n
   - dzil listdeps   --missing | cpanm -n
 
