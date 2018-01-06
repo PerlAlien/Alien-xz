@@ -63,7 +63,11 @@ Returns the name of the xz command.  Usually just `xz`.
 
 # AUTHOR
 
-Graham Ollis <plicease@cpan.org>
+Author: Graham Ollis <plicease@cpan.org>
+
+Contributors:
+
+Dylan William Hardison (dylanwh, DHARDISON)
 
 # COPYRIGHT AND LICENSE
 
