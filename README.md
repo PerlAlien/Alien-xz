@@ -42,7 +42,7 @@ In your script or module:
     use Alien::xz;
     use Env qw( @PATH );
     
-    unshift @ENV, Alien::xz->bin_dir;
+    unshift @PATH, Alien::xz->bin_dir;
 
 # DESCRIPTION
 
