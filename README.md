@@ -1,48 +1,51 @@
-# Alien::xz [![Build Status](https://secure.travis-ci.org/plicease/Alien-xz.png)](http://travis-ci.org/plicease/Alien-xz)
+# Alien::xz
 
 Find or build xz
 
 # SYNOPSIS
 
-In your Build.PL:
-
-    use Module::Build;
-    use Alien::xz;
-    my $builder = Module::Build->new(
-      ...
-      configure_requires => {
-        'Alien::xz' => '0',
-        ...
-      },
-      extra_compiler_flags => Alien::xz->cflags,
-      extra_linker_flags   => Alien::xz->libs,
-      ...
-    );
-    
-    $build->create_build_script;
-
 In your Makefile.PL:
 
-    use ExtUtils::MakeMaker;
-    use Config;
-    use Alien::xz;
-    
-    WriteMakefile(
-      ...
-      CONFIGURE_REQUIRES => {
-        'Alien::xz' => '0',
-      },
-      CCFLAGS => Alien::xz->cflags . " $Config{ccflags}",
-      LIBS    => [ Alien::xz->libs ],
-      ...
-    );
+```perl
+use ExtUtils::MakeMaker;
+use Alien::Base::Wrapper ();
+
+WriteMakefile(
+  Alien::Base::Wrapper->new('Alien::xz')->mm_args2(
+    # MakeMaker args
+    NAME => 'My::XS',
+    ...
+  ),
+);
+```
+
+In your Build.PL:
+
+```perl
+use Module::Build;
+use Alien::Base::Wrapper qw( Alien::xz !export );
+
+my $builder = Module::Build->new(
+  ...
+  configure_requires => {
+    'Alien::xz' => '0',
+    ...
+  },
+  Alien::Base::Wrapper->mb_args,
+  ...
+);
+
+$build->create_build_script;
+```
 
 In your script or module:
 
-    use Alien::xz;
-    use Env qw( @PATH );
-    
-    unshift @PATH, Alien::xz->bin_dir;
+```perl
+use Alien::xz;
+use Env qw( @PATH );
+
+unshift @PATH, Alien::xz->bin_dir;
+```
 
 # DESCRIPTION
 
@@ -53,7 +56,9 @@ the compression utility, or liblzma, which comes with it.
 
 ## xz
 
-    %{xz}
+```
+%{xz}
+```
 
 Returns the name of the xz command.  Usually just `xz`.
 
