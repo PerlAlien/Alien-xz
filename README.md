@@ -1,4 +1,4 @@
-# Alien::xz
+# Alien::xz ![linux](https://github.com/plicease/Alien-xz/workflows/linux/badge.svg)
 
 Find or build xz
 
