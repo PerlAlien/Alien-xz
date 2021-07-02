@@ -22,7 +22,7 @@ share {
 
   my $configure_flags = '';
 
-  $configure_flags .= " --disable-assemble" if $^O eq 'MSWin32';
+  $configure_flags .= " --disable-assembler" if $^O eq 'MSWin32';
 
   build [
     "%{configure} --disable-shared $configure_flags",
