@@ -59,7 +59,7 @@ jobs:
 
       - name: Install Static Dependencies
         run: |
-          cpanm -n Dist::Zilla
+          cpanm -n Dist::Zilla Alien::Build::Plugin::Download::GitHub
           dzil authordeps --missing | cpanm -n
           dzil listdeps --missing   | cpanm -n
 

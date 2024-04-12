@@ -15,6 +15,7 @@ if echo $CIP_ENV | grep -q system; then
   cip sudo apt-get -y install liblzma-dev xz-utils
 else
   echo use internet xz
+  cip exec cpanm -n Alien::Build::Plugin::Download::GitHub
 fi
 
 cip exec dzil-cpanm -n Alien::Build::Plugin::Download::GitHub
