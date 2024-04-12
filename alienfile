@@ -9,10 +9,8 @@ plugin 'Probe::CommandLine' => (
 
 share {
 
-  plugin Download => (
-    url     => 'https://tukaani.org/xz/',
-    version => qr/^xz-([0-9\.]+)\.tar\.gz$/,
-  );
+  start_url 'https://github.com/tukaani-project/xz/releases/download/v5.4.6/xz-5.4.6.tar.gz';
+  plugin 'Download';
 
   plugin Extract => 'tar.gz';
 
