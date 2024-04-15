@@ -17,7 +17,7 @@ if echo $CIP_ENV | grep -q system; then
 else
   echo use internet xz
   cip exec cpanm -n Alien::Build::Plugin::Download::GitHub
-  cip exec apt-get -y install autopoint
+  cip sudo apt-get -y install autopoint
 fi
 
 cip exec dzil-cpanm -n Alien::Build::Plugin::Download::GitHub
