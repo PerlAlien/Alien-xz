@@ -17,8 +17,12 @@ jobs:
       fail-fast: false
       matrix:
         cip:
-          - tag: "5.39"
+          - tag: "5.41"
             install_type: system
+          - tag: "5.40"
+            install_type: system
+          - tag: "5.40"
+            install_type: share
           - tag: "5.38"
             install_type: system
           - tag: "5.38"
